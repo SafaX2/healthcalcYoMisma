@@ -249,7 +249,42 @@ Para cada categoría, probamos valores que están justo en el límite para asegu
 * **Sobrepeso (Overweight):** Se comprueba con valores desde 25 hasta justo antes de 30.
 * **Obesidad (Obesity):** Se comprueba con valores desde 30 en adelante.
 * **Seguridad:** Se rechazan clasificaciones para resultados de IMC negativos o absurdamente altos (más de 150).
+---
 
+### Pruebas de Peso Corporal Ideal (IBW) – Fórmula de Lorentz
+
+* **Cálculo correcto:**
+  - Se comprueba el cálculo para un hombre con una altura válida.
+  - Se comprueba el cálculo para una mujer con una altura válida.
+  - Se verifica que, para la misma altura, el resultado sea diferente entre hombre y mujer.
+
+* **Protección ante datos imposibles:**
+  - El sistema debe rechazar alturas menores a 30 cm o mayores a 300 cm.
+  - El sistema debe rechazar alturas negativas o iguales a cero.
+  - El sistema debe rechazar valores de sexo distintos de "male" o "female".
+
+---
+
+### Pruebas de Tasa Metabólica Basal (BMR) – Mifflin-St Jeor
+
+* **Cálculo correcto:**
+  - Se comprueba el cálculo para un hombre adulto con valores normales.
+  - Se comprueba el cálculo para una mujer adulta con valores normales.
+  - Se verifica que el resultado cambie al cambiar el sexo manteniendo los demás valores iguales.
+
+* **Pruebas de límites:**
+  - Peso mínimo permitido (1 kg).
+  - Peso máximo permitido (700 kg).
+  - Altura mínima permitida (30 cm).
+  - Altura máxima permitida (300 cm).
+  - Edad mínima (0 años).
+  - Edad avanzada (por ejemplo, 120 años).
+
+* **Protección ante datos imposibles:**
+  - El sistema debe rechazar pesos negativos o iguales a cero.
+  - El sistema debe rechazar alturas negativas o iguales a cero.
+  - El sistema debe rechazar edades negativas.
+  - El sistema debe rechazar valores de sexo distintos de "male" o "female".
 </details>
 
 
